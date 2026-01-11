@@ -6,6 +6,9 @@
     --secondary-color: #C0A060; /* Oro viejo */
     --accent-color: #375A7F; /* Azul petróleo */
     --light-color: #FFFFFF; /* Blanco */
+    --white: #FFFFFF;
+    --text-light: #6b6b6b;
+    --dark-color: #222222;
     --border-color: rgba(0, 0, 0, 0.1);
     --box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
 }
@@ -104,10 +107,6 @@ img {
     height: 3px;
     background-color: var(--secondary-color);
     display: block;
-}
-
-.section h2::after {
-    display: none;
 }
 
 .bg-light {
@@ -263,7 +262,6 @@ nav ul {
     margin: 0;
     padding: 0;
     position: relative;
-    left: 250px; /* Moved 250px to the right */
     justify-content: center;
 }
 
@@ -444,7 +442,7 @@ nav ul li a:hover::after {
     padding: 5rem 0;
     color: #fff;
     background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.3)), 
-                url('https://images.unsplash.com/photo-1595079836413-faa7649af73c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80') no-repeat center center/cover fixed;
+                url('https://images.unsplash.com/photo-1595079836413-faa7649af73c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80') no-repeat center/cover;
     min-height: 100vh;
     display: flex;
     align-items: center;
@@ -474,26 +472,6 @@ nav ul li a:hover::after {
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 2rem;
     margin-top: 2rem;
-}
-
-#marcas .container {
-    position: relative;
-    z-index: 2;
-}
-
-#marcas h2,
-#marcas .section-intro {
-    color: #fff;
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
-    position: relative;
-}
-
-.brands-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 30px;
-    margin-top: 50px;
-    position: relative;
 }
 
 .brand {

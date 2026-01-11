@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -24,7 +24,7 @@
                     <button id="translateBtnEs" class="flag-btn" data-lang="es" title="Español">
                         <img src="https://flagcdn.com/w40/es.png" alt="Español" width="30" height="20">
                     </button>
-                    <button id="translateBtnEn" class="flag-btn active" data-lang="en" title="English">
+                    <button id="translateBtnEn" class="flag-btn" data-lang="en" title="English">
                         <img src="https://flagcdn.com/w40/gb.png" alt="English" width="30" height="20">
                     </button>
                     <button id="translateBtnPl" class="flag-btn" data-lang="pl" title="Polski">
@@ -34,7 +34,7 @@
             </div>
             <nav>
                 <ul>
-                    <li><a href="#" data-translate="Inicio">Inicio</a></li>
+                    <li><a href="#inicio" data-translate="Inicio">Inicio</a></li>
                     <li><a href="#nosotros" data-translate="Sobre nosotros">Sobre nosotros</a></li>
                     <li><a href="#contacto" data-translate="Contacto">Contacto</a></li>
                 </ul>
@@ -58,8 +58,8 @@
             <h2 data-translate="Nuestra Historia">Nuestra Historia</h2>
             <div class="about-content">
                 <div class="about-text">
-                    <p class="lead" data-translate="Con más de 40 años en el sector, nos hemos consolidado como representantes de confianza de las principales fábricas de pieles de España, ajustándonos a las necesidades de nuestros clientes.">Con más de 40 años en el sector, nos hemos consolidado como representantes de confianza de las principales fábricas de pieles de España, ajustándonos a las necesidades de nuestros clientes.</p>
-                    <p data-translate="Nuestro compromiso con la excelencia y la calidad nos ha permitido construir relaciones duraderas con clientes y proveedores en todo el país. Ofrecemos asesoramiento experto y productos de la más alta gama para satisfacer las necesidades más exigentes.">Nuestro compromiso con la excelencia y la calidad nos ha permitido construir relaciones duraderas con clientes y proveedores en todo el país. Ofrecemos asesoramiento experto y productos de la más alta gama para satisfacer las necesidades más exigentes.</p>
+                    <p class="lead" data-translate="Con más de 40 años en el sector, nos hemos consolidado como representantes de confianza de las principales fábricas de pieles de España.">Con más de 40 años en el sector, nos hemos consolidado como representantes de confianza de las principales fábricas de pieles de España.</p>
+                    <p data-translate="Nuestro compromiso con la excelencia y la calidad nos ha permitido construir relaciones duraderas con clientes y proveedores en todo el país. Ofrecemos asesoramiento experto y productos de alta calidad adaptados a las necesidades del cliente.">Nuestro compromiso con la excelencia y la calidad nos ha permitido construir relaciones duraderas con clientes y proveedores en todo el país. Ofrecemos asesoramiento experto y productos de alta calidad adaptados a las necesidades del cliente.</p>
                     <div class="features-grid">
                         <div class="feature">
                             <i class="fas fa-award"></i>
@@ -205,13 +205,5 @@
 
     <script src="js/main.js"></script>
     <script src="js/translate.js"></script>
-    <script>
-        // Initialize translation after DOM is fully loaded
-        document.addEventListener('DOMContentLoaded', function() {
-            // Set default language to Spanish if not set
-            const savedLang = localStorage.getItem('preferredLanguage') || 'es';
-            translatePage(savedLang);
-        });
-    </script>
 </body>
 </html>

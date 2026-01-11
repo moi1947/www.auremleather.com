@@ -20,7 +20,7 @@ const translations = {
         // About section
         'Nuestra Historia': 'Nuestra Historia',
         'Con más de 40 años en el sector, nos hemos consolidado como representantes de confianza de las principales fábricas de pieles de España.': 'Con más de 40 años en el sector, nos hemos consolidado como representantes de confianza de las principales fábricas de pieles de España.',
-        'Nuestro compromiso con la excelencia y la calidad nos ha permitido construir relaciones duraderas con clientes y proveedores en todo el país. Ofrecemos asesoramiento experto y productos de la más alta gama para satisfacer las necesidades más exigentes.': 'Nuestro compromiso con la excelencia y la calidad nos ha permitido construir relaciones duraderas con clientes y proveedores en todo el país. Ofrecemos asesoramiento experto y productos de la más alta gama para satisfacer las necesidades más exigentes.',
+        'Nuestro compromiso con la excelencia y la calidad nos ha permitido construir relaciones duraderas con clientes y proveedores en todo el país. Ofrecemos asesoramiento experto y productos adaptados a las necesidades del cliente.': 'Nuestro compromiso con la excelencia y la calidad nos ha permitido construir relaciones duraderas con clientes y proveedores en todo el país. Ofrecemos asesoramiento experto y productos adaptados a las necesidades del cliente.',
         'Calidad Garantizada': 'Calidad Garantizada',
         'Selección rigurosa de materiales': 'Selección rigurosa de materiales',
         'Confianza': 'Confianza',
@@ -90,9 +90,8 @@ const translations = {
         
         // About section
         'Nuestra Historia': 'Our History',
-        'Sobre nosotros': 'About us',
-        'Con más de 40 años en el sector, nos hemos consolidado como representantes de confianza de las principales fábricas de pieles de España.': 'With over 40 years in the industry, we have established ourselves as trusted representatives of the main leather manufacturers in Spain.',
-        'Nuestro compromiso con la excelencia y la calidad nos ha permitido construir relaciones duraderas con clientes y proveedores en todo el país. Ofrecemos asesoramiento experto y productos de la más alta gama para satisfacer las necesidades más exigentes.': 'Our commitment to excellence and quality has allowed us to build lasting relationships with customers and suppliers throughout the country. We offer expert advice and top-quality products to meet the most demanding needs.',
+        'Con más de 40 años en el sector, nos hemos consolidado como representantes de confianza de las principales fábricas de pieles de España.': 'With over 40 years in the industry, we have established ourselves as trusted representatives of leading leather manufacturers in Spain.',
+        'Nuestro compromiso con la excelencia y la calidad nos ha permitido construir relaciones duraderas con clientes y proveedores en todo el país. Ofrecemos asesoramiento experto y productos adaptados a las necesidades del cliente.': 'Our commitment to excellence and quality has allowed us to build long-lasting relationships with customers and suppliers across the country. We offer expert advice and products tailored to customer needs.',
         'Calidad Garantizada': 'Guaranteed Quality',
         'Selección rigurosa de materiales': 'Rigorous material selection',
         'Confianza': 'Trust',
@@ -178,8 +177,8 @@ const translations = {
         
         // About section
         'Nuestra Historia': 'Nasza historia',
-        'Con más de 40 años en el sector, nos hemos consolidado como representantes de confianza de las principales fábricas de pieles de España.': 'Z ponad 40-letnim doświadczeniem w branży ugruntowaliśmy swoją pozycję jako zaufani przedstawiciele wiodących hiszpańskich fabryk skór.',
-        'Nuestro compromiso con la excelencia y la calidad nos ha permitido construir relaciones duraderas con clientes y proveedores en todo el país. Ofrecemos asesoramiento experto y productos de la más alta gama para satisfacer las necesidades más exigentes.': 'Nasze zaangażowanie w doskonałość i jakość pozwoliło nam zbudować trwałe relacje z klientami i dostawcami w całym kraju. Oferujemy fachowe doradztwo i produkty najwyższej klasy, aby sprostać najbardziej wymagającym potrzebom.',
+        'Con más de 40 años en el sector, nos hemos consolidado como representantes de confianza de las principales fábricas de pieles de España.': 'Z ponad 40-letnim doświadczeniem w branży skórzanej, staliśmy się zaufanymi przedstawicielami wiodących producentów skór w Hiszpanii.',
+        'Nuestro compromiso con la excelencia y la calidad nos ha permitido construir relaciones duraderas con clientes y proveedores en todo el país. Ofrecemos asesoramiento experto y productos adaptados a las necesidades del cliente.': 'Nasze zaangażowanie w doskonałość i jakość pozwoliło nam zbudować długotrwałe relacje z klientami i dostawcami w całym kraju. Oferujemy profesjonalne doradztwo i produkty dostosowane do potrzeb klienta.',
         'Calidad Garantizada': 'Gwarantowana jakość',
         'Selección rigurosa de materiales': 'Rygorystyczna selekcja materiałów',
         'Confianza': 'Zaufanie',
@@ -226,24 +225,8 @@ const translations = {
         'Enviar mensaje': 'Wyślij wiadomość',
         'Al enviar este formulario, aceptas nuestra': 'Wysyłając ten formularz, akceptujesz naszą',
         'política de privacidad': 'politykę prywatności',
-        'tu nombre': 'Twoje imię',
-        'tu@email.com': 'twoj@email.com',
-        '¿En qué podemos ayudarte?': 'W czym możemy Ci pomóc?',
-        
-        // Footer
-        'Derechos reservados': 'Wszelkie prawa zastrzeżone',
-        'Aviso legal': 'Informacja prawna',
-        'Política de privacidad': 'Polityka prywatności',
-        'Política de cookies': 'Polityka plików cookie',
-        'Asunto': 'Temat',
-        'Mensaje': 'Wiadomość',
-        'Escribe tu mensaje aquí...': 'Wpisz swoją wiadomość tutaj...',
-        'Enviar mensaje': 'Wyślij wiadomość',
-        'Al enviar este formulario, aceptas nuestra': 'Wysyłając ten formularz, akceptujesz naszą',
-        'política de privacidad': 'politykę prywatności',
         'tu nombre': 'Twoje imię i nazwisko',
         'tu@email.com': 'twoj@email.com',
-        '+34 600 000 000': '+48 600 000 000',
         '¿En qué podemos ayudarte?': 'W czym możemy Ci pomóc?',
         'Asunto': 'Temat',
         'Mensaje': 'Wiadomość',
@@ -271,16 +254,17 @@ window.translatePage = function(lang) {
         btn.classList.remove('active');
     });
     
-    // Add active class to selected language button
-    document.querySelector(`.flag-btn[data-lang="${lang}"]`).classList.add('active');
+    // Add active class to selected language button (null-safe)
+    const activeBtn = document.querySelector(`.flag-btn[data-lang="${lang}"]`);
+    if (activeBtn) {
+        activeBtn.classList.add('active');
+    }
     
         // Update all translatable elements
     const elements = document.querySelectorAll('[data-translate]');
     elements.forEach(element => {
         const key = element.getAttribute('data-translate');
         if (translations[lang] && translations[lang][key]) {
-            // For elements that might contain HTML, we'll use innerHTML
-            // but only if the translation doesn't contain HTML tags
             const translation = translations[lang][key];
             if (translation.match(/<[a-z][\s\S]*>/i)) {
                 element.innerHTML = translation;
@@ -302,7 +286,6 @@ window.translatePage = function(lang) {
     // Update button text
     const buttons = document.querySelectorAll('button:not(.flag-btn)');
     buttons.forEach(button => {
-        // Get the original text from data-translate attribute if it exists
         const key = button.getAttribute('data-translate') || button.textContent.trim();
         if (translations[lang] && translations[lang][key]) {
             button.innerHTML = button.innerHTML.replace(key, translations[lang][key]);
@@ -331,7 +314,7 @@ window.translatePage = function(lang) {
     localStorage.setItem('preferredLanguage', lang);
 }
 
-// Initialize the page with the preferred language or default to English
+// Initialize the page with the preferred language or default to Spanish
 document.addEventListener('DOMContentLoaded', function() {
     // Get all language buttons
     const langButtons = document.querySelectorAll('.flag-btn');
@@ -361,25 +344,28 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // If there's a saved language, apply it
     if (savedLang && translations[savedLang]) {
-        // Update active button
         const activeButton = document.querySelector(`.flag-btn[data-lang="${savedLang}"]`);
         if (activeButton) {
             activeButton.classList.add('active');
         }
-        // Translate the page
         translatePage(savedLang);
     } else {
-        // Set English as default if no language is saved
-        document.documentElement.lang = 'en';
-        const enButton = document.getElementById('translateBtnEn');
-        if (enButton) {
-            enButton.classList.add('active');
-            // Ensure default language is set in localStorage
-            localStorage.setItem('preferredLanguage', 'en');
+        // Set Spanish as default if no language is saved
+        const defaultLang = 'es';
+        document.documentElement.lang = defaultLang;
+        const defaultButton = document.querySelector(`.flag-btn[data-lang="${defaultLang}"]`);
+        if (defaultButton) {
+            defaultButton.classList.add('active');
+            localStorage.setItem('preferredLanguage', defaultLang);
         }
+        translatePage(defaultLang);
     }
 
-    document.getElementById('translateBtnPl').addEventListener('click', function() {
-        translatePage('pl');
-    });
+    // Safe attach for Polish button (already attached above but keep as fallback)
+    const plBtn = document.getElementById('translateBtnPl');
+    if (plBtn) {
+        plBtn.addEventListener('click', function() {
+            translatePage('pl');
+        });
+    }
 });
