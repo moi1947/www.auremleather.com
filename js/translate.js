@@ -155,7 +155,16 @@ const translations = {
         'Derechos reservados': 'All rights reserved',
         'Aviso legal': 'Legal notice',
         'Política de privacidad': 'Privacy policy',
-        'Política de cookies': 'Cookie policy'
+        'Política de cookies': 'Cookie policy',
+        
+        // Additional translations
+        'Nos ajustamos a las necesidades de nuestros clientes con una experiencia de 40 años en el sector': 'We adapt to our customers\' needs with 40 years of experience in the sector',
+        '+34 687 832 317': '+34 687 832 317',
+        '+48 796 186 974': '+48 796 186 974',
+        '+34 673 78 71 72': '+34 673 78 71 72',
+        'info@aurem.com': 'info@aurem.com',
+        'Calle Carlos Arniches 38, Elda, Alicante (03600)': 'Calle Carlos Arniches 38, Elda, Alicante (03600)',
+        'Ul. Wileńska 5, Kraków (31-413)': 'Ul. Wileńska 5, Kraków (31-413)'
     },
     'pl': {
         // Header
