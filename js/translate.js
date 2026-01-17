@@ -2,7 +2,7 @@
 const translations = {
     'es': {
         // Header
-        'Aurem': 'Aurem',
+        'Aurem': 'Aurem <span>Leather</span>',
         'Representante oficial de fábricas líderes': 'Representante oficial de fábricas líderes',
         'Inicio': 'Inicio',
         'Sobre nosotros': 'Sobre nosotros',
@@ -73,7 +73,7 @@ const translations = {
     },
     'en': {
         // Header
-        'Aurem': 'Aurem',
+        'Aurem': 'Aurem <span>Leather</span>',
         'Representante oficial de fábricas líderes': 'Official representative of leading manufacturers',
         'Inicio': 'Home',
         'Sobre nosotros': 'About us',
@@ -84,6 +84,7 @@ const translations = {
         'Contáctenos': 'Contact us',
         
         // Hero section
+        '40 años de experiencia en el sector de los curtidos': '40 years of experience in the tanning industry',
         '40 años de experiencia en el sector de las pieles': '40 years of experience in the leather sector',
         'Representantes oficiales de las mejores fábricas de pieles de España': 'Official representatives of the best leather manufacturers in Spain',
         'Ver más': 'Learn more',
@@ -134,7 +135,7 @@ const translations = {
         'Estamos a su disposición': 'We are at your service',
         'Dirección de Oficinas': 'Office Address',
         'España': 'Spain',
-        'Teléfono': 'Phone',
+        'Polonia': 'Poland',
         'Correo electrónico': 'Email',
         'Lunes a Viernes: 8:00 - 20:00': 'Monday to Friday: 8:00 AM - 8:00 PM',
         'Envíanos un mensaje': 'Send us a message',
@@ -162,15 +163,45 @@ const translations = {
         '+34 687 832 317': '+34 687 832 317',
         '+48 796 186 974': '+48 796 186 974',
         '+34 673 78 71 72': '+34 673 78 71 72',
-        'info@aurem.com': 'info@aurem.com',
+        'info@auremleather.com': 'info@auremleather.com',
         'Calle Carlos Arniches 38, Elda, Alicante (03600)': 'Calle Carlos Arniches 38, Elda, Alicante (03600)',
         'Ul. Wileńska 5, Kraków (31-413)': 'Ul. Wileńska 5, Kraków (31-413)'
     },
     'pl': {
         // Header
-        'Aurem': 'Aurem',
+        'Aurem': 'Aurem <span>Leather</span>',
         'Representante oficial de fábricas líderes': 'Oficjalny przedstawiciel wiodących producentów',
         'Inicio': 'Strona główna',
+        'Sobre nosotros': 'O nas',
+        'Nuestro equipo': 'Nasz zespół',
+        'Marcas': 'Marki',
+        'Contacto': 'Kontakt',
+        'Conócenos': 'Poznaj nas',
+        'Contáctenos': 'Skontaktuj się z nami',
+        
+        // Hero section
+        '40 años de experiencia en el sector de las pieles': '40 lat doświadczenia w branży skórzanej',
+        'Representantes oficiales de las mejores fábricas de pieles de España': 'Oficjalni przedstawiciele najlepszych producentów skór w Hiszpanii',
+        'Ver más': 'Zobacz więcej',
+        
+        // About section
+        'Nuestra Historia': 'Nasza historia',
+        'Con más de 40 años en el sector, nos hemos consolidado como representantes de confianza de las principales fábricas de pieles de España, ajustándonos a las necesidades de nuestros clientes.': 'Z ponad 40-letnim doświadczeniem w branży ugruntowaliśmy swoją pozycję jako zaufani przedstawiciele wiodących producentów skór w Hiszpanii, dostosowując się do potrzeb naszych klientów.',
+        'Nuestro compromiso con la excelencia y la calidad nos ha permitido construir relaciones duraderas con clientes y proveedores en todo el país. Ofrecemos asesoramiento experto y productos de la más alta gama para satisfacer las necesidades más exigentes.': 'Nasze zaangażowanie w doskonałość i jakość pozwoliło nam zbudować trwałe relacje z klientami i dostawcami w całym kraju. Oferujemy fachowe doradztwo i produkty najwyższej klasy, aby sprostać najbardziej wymagającym potrzebom.',
+        'Calidad Garantizada': 'Gwarantowana jakość',
+        'Selección rigurosa de materiales': 'Rygorystyczny dobór materiałów',
+        'Confianza': 'Zaufanie',
+        'Relaciones a largo plazo': 'Długoterminowe relacje',
+        'Asesoramiento': 'Doradztwo',
+        'Expertos a su disposición': 'Eksperci do Twojej dyspozycji',
+        
+        // Team section
+        'Nuestro Equipo': 'Nasz zespół',
+        'Conoce a nuestro equipo de expertos que estarán encantados de atenderte': 'Poznaj nasz zespół ekspertów, którzy z przyjemnością Ci pomogą',
+        'Moises Cortes Martin': 'Moises Cortes Martin',
+        'CEO Internacional': 'Dyrektor Międzynarodowy',
+        'Ruben Martinez Chica': 'Ruben Martinez Chica',
+        'CEO Nacional': 'Dyrektor Krajowy',
         
         // About section
         'Con más de 40 años en el sector, nos hemos consolidado como representantes de confianza de las principales fábricas de pieles de España, ajustándonos a las necesidades de nuestros clientes.': 'Z ponad 40-letnim doświadczeniem w branży ugruntowaliśmy swoją pozycję jako zaufani przedstawiciele wiodących producentów skór w Hiszpanii, dostosowując się do potrzeb naszych klientów.',
@@ -178,6 +209,7 @@ const translations = {
         'Múltiples acabados y diferentes líneas de calidad/precio': 'Wiele wykończeń i różne linie jakości/ceny',
         'Sobre nosotros': 'O nas',
         'Información de contacto': 'Dane kontaktowe',
+        'Polonia': 'Polska',
         'Estamos a su disposición': 'Jesteśmy do Państwa dyspozycji',
         'Dirección de Oficinas': 'Adres biura',
         'España': 'Hiszpania',
@@ -192,6 +224,7 @@ const translations = {
         'Contáctenos': 'Skontaktuj się z nami',
         
         // Hero section
+        '40 años de experiencia en el sector de los curtidos': '40 lat doświadczenia w branży garbarskiej',
         '40 años de experiencia en el sector de las pieles': '40 lat doświadczenia w branży skórzanej',
         'Representantes oficiales de las mejores fábricas de pieles de España': 'Oficjalni przedstawiciele najlepszych fabryk skór w Hiszpanii',
         'Ver más': 'Zobacz więcej',

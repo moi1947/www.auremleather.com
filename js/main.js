@@ -6,7 +6,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         const targetId = this.getAttribute('href');
         
         // Handle 'Inicio' link (scroll to top)
-        if (targetId === '#') {
+        if (targetId === '#' || targetId === '#inicio') {
             window.scrollTo({
                 top: 0,
                 behavior: 'smooth'
@@ -29,7 +29,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             
             // Cerrar el menú móvil si está abierto
             const mobileMenu = document.querySelector('.mobile-menu');
-            if (mobileMenu && mobileMenu.classList.contains('active')) {
+            if (mobileMenu && mobileMenu.classList.contains('active') && typeof toggleMobileMenu === 'function') {
                 toggleMobileMenu();
             }
         }
@@ -57,31 +57,31 @@ if (contactForm) {
 let lastScroll = 0;
 const header = document.querySelector('header');
 
-window.addEventListener('scroll', () => {
-    const currentScroll = window.pageYOffset;
-    
-    if (currentScroll <= 0) {
-        header.classList.remove('scroll-up');
-        return;
-    }
-    
-    if (currentScroll > lastScroll && !header.classList.contains('scroll-down')) {
-        // Hacia abajo
-        header.classList.remove('scroll-up');
-        header.classList.add('scroll-down');
-    } else if (currentScroll < lastScroll && header.classList.contains('scroll-down')) {
-        // Hacia arriba
-        header.classList.remove('scroll-down');
-        header.classList.add('scroll-up');
-    }
-    
-    lastScroll = currentScroll;
-});
+if (header) {
+    window.addEventListener('scroll', () => {
+        const currentScroll = window.pageYOffset;
+        
+        if (currentScroll <= 0) {
+            header.classList.remove('scroll-up');
+            return;
+        }
+        
+        if (currentScroll > lastScroll && !header.classList.contains('scroll-down')) {
+            // Hacia abajo
+            header.classList.remove('scroll-up');
+            header.classList.add('scroll-down');
+        } else if (currentScroll < lastScroll && header.classList.contains('scroll-down')) {
+            // Hacia arriba
+            header.classList.remove('scroll-down');
+            header.classList.add('scroll-up');
+        }
+        
+        lastScroll = currentScroll;
+    });
+}
 
-// Menú móvil eliminado según solicitud del usuario
-
-// Añadir clase al hacer scroll para animaciones
-const animateOnScroll = () => {
+// Función para animar elementos al hacer scroll
+function animateOnScroll() {
     const elements = document.querySelectorAll('.animate-on-scroll');
     
     elements.forEach(element => {
@@ -92,7 +92,7 @@ const animateOnScroll = () => {
             element.classList.add('animate');
         }
     });
-};
+}
 
 window.addEventListener('scroll', animateOnScroll);
 
@@ -114,11 +114,11 @@ function handleResize() {
     const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
     const mobileMenuBtnIcon = document.querySelector('.mobile-menu-btn i');
     
-    // Si la pantalla es mayor a 768px, asegurarse de que el menú móvil esté cerrado
-    if (window.innerWidth > 768) {
-        nav.classList.remove('active');
-        if (mobileMenuBtn) mobileMenuBtn.classList.remove('active');
-        if (mobileMenuBtnIcon) {
+    if (nav && mobileMenuBtn && mobileMenuBtnIcon) {
+        // Si la pantalla es mayor a 768px, asegurarse de que el menú móvil esté cerrado
+        if (window.innerWidth > 768) {
+            nav.classList.remove('active');
+            mobileMenuBtn.classList.remove('active');
             mobileMenuBtnIcon.classList.remove('fa-times');
             mobileMenuBtnIcon.classList.add('fa-bars');
         }
@@ -127,3 +127,23 @@ function handleResize() {
 
 // Escuchar cambios en el tamaño de la ventana
 window.addEventListener('resize', handleResize);
+
+// Función para alternar el menú móvil
+function toggleMobileMenu() {
+    const nav = document.querySelector('nav');
+    const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+    const mobileMenuBtnIcon = document.querySelector('.mobile-menu-btn i');
+    
+    if (nav && mobileMenuBtn && mobileMenuBtnIcon) {
+        nav.classList.toggle('active');
+        mobileMenuBtn.classList.toggle('active');
+        
+        if (mobileMenuBtnIcon.classList.contains('fa-bars')) {
+            mobileMenuBtnIcon.classList.remove('fa-bars');
+            mobileMenuBtnIcon.classList.add('fa-times');
+        } else {
+            mobileMenuBtnIcon.classList.remove('fa-times');
+            mobileMenuBtnIcon.classList.add('fa-bars');
+        }
+    }
+}
