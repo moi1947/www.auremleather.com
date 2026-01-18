@@ -318,5 +318,52 @@
             translatePage(savedLang);
         });
     </script>
+
+    <!-- WhatsApp Floating Button -->
+    <a href="#" class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Contactar por WhatsApp" data-translate-title="¿Buscas pieles para fabricación?" title="¿Buscas pieles para fabricación?" id="whatsapp-button">
+        <i class="fab fa-whatsapp"></i>
+        <span class="whatsapp-tooltip" data-translate="¿Buscas pieles para fabricación?">¿Buscas pieles para fabricación?</span>
+    </a>
+    
+    <script>
+    // Update WhatsApp link based on selected language
+    function updateWhatsAppLink(lang) {
+        const phoneNumber = '34673787172';
+        let message = '';
+        
+        // Set message based on language
+        switch(lang) {
+            case 'es':
+                message = 'Hola, estoy buscando proveedores de piel para fabricación. Me gustaría consultar disponibilidad de un tipo de piel específica.';
+                break;
+            case 'en':
+                message = 'Hello, I am looking for leather suppliers for manufacturing. I would like to check the availability of a specific type of leather.';
+                break;
+            case 'pl':
+                message = 'Dzień dobry, poszukuję dostawców skór do produkcji. Chciałbym sprawdzić dostępność konkretnego rodzaju skóry.';
+                break;
+            default:
+                message = 'Hola, estoy buscando proveedores de piel para fabricación. Me gustaría consultar disponibilidad de un tipo de piel específica.';
+        }
+        
+        // Update the WhatsApp button href
+        const whatsappButton = document.getElementById('whatsapp-button');
+        if (whatsappButton) {
+            whatsappButton.href = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+        }
+    }
+    
+    // Call the function when language changes
+    document.addEventListener('DOMContentLoaded', function() {
+        // Initial call
+        const savedLang = localStorage.getItem('preferredLanguage') || 'es';
+        updateWhatsAppLink(savedLang);
+        
+        // Listen for language changes
+        document.addEventListener('languageChange', function(e) {
+            updateWhatsAppLink(e.detail.lang);
+        });
+    });
+    </script>
 </body>
 </html>
