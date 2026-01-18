@@ -8,6 +8,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css?v=1.3">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/css/flag-icon.min.css">
     <meta name="description" content="Nos ajustamos a las necesidades de nuestros clientes con una experiencia de 40 años en el sector" data-translate="Nos ajustamos a las necesidades de nuestros clientes con una experiencia de 40 años en el sector">
@@ -17,19 +20,10 @@
         <div class="container">
             <div class="header-content">
                 <div class="logo">
-                    <h1 data-translate="Aurem">Aurem <span>Leather</span></h1>
+                    <a href="#inicio" class="logo-link">
+                        <h1>Aurem Leather</h1>
+                    </a>
                     <p data-translate="Representante oficial de fábricas líderes">Representante oficial de fábricas líderes</p>
-                </div>
-                <div class="language-selector">
-                    <button id="translateBtnEs" class="flag-btn" data-lang="es" title="Español">
-                        <img src="https://flagcdn.com/w40/es.png" alt="Español" width="30" height="20">
-                    </button>
-                    <button id="translateBtnEn" class="flag-btn active" data-lang="en" title="English">
-                        <img src="https://flagcdn.com/w40/gb.png" alt="English" width="30" height="20">
-                    </button>
-                    <button id="translateBtnPl" class="flag-btn" data-lang="pl" title="Polski">
-                        <img src="https://flagcdn.com/w40/pl.png" alt="Polski" width="30" height="20">
-                    </button>
                 </div>
             </div>
             <nav>
@@ -37,6 +31,17 @@
                     <li><a href="#" data-translate="Inicio">Inicio</a></li>
                     <li><a href="#nosotros" data-translate="Sobre nosotros">Sobre nosotros</a></li>
                     <li><a href="#contacto" data-translate="Contacto">Contacto</a></li>
+                    <li class="language-selector">
+                        <button id="translateBtnEs" class="flag-btn" data-lang="es" title="Español">
+                            <img src="https://flagcdn.com/w40/es.png" alt="Español" width="30" height="20">
+                        </button>
+                        <button id="translateBtnEn" class="flag-btn active" data-lang="en" title="English">
+                            <img src="https://flagcdn.com/w40/gb.png" alt="English" width="30" height="20">
+                        </button>
+                        <button id="translateBtnPl" class="flag-btn" data-lang="pl" title="Polski">
+                            <img src="https://flagcdn.com/w40/pl.png" alt="Polski" width="30" height="20">
+                        </button>
+                    </li>
                 </ul>
             </nav>
         </div>
@@ -44,11 +49,17 @@
 
     <section id="hero">
         <div class="container">
-            <h1 class="hero-title" data-translate="40 años de experiencia en el sector de los curtidos">40 años de experiencia en el sector de los curtidos</h1>
-            <p class="hero-subtitle" data-translate="Representantes oficiales de las mejores fábricas de pieles de España">Representantes oficiales de las mejores fábricas de pieles de España</p>
-            <div class="hero-cta">
-                <a href="#contacto" class="btn btn-primary" data-translate="Contáctenos">Contáctenos</a>
-                <a href="#nosotros" class="btn btn-outline" data-translate="Conócenos">Conócenos</a>
+            <div class="hero-content">
+                <div class="logo-container">
+                    <img src="images/logo-aurem.png" alt="Aurem Leather" class="logo-img">
+                </div>
+                <div class="hero-text">
+                    <p class="experience-text" data-translate="40 años de experiencia en el sector de los curtidos">40 años de experiencia en el sector de los curtidos</p>
+                    <div class="hero-cta">
+                        <a href="#contacto" class="btn btn-primary" data-translate="Contáctenos">Contáctenos</a>
+                        <a href="#nosotros" class="btn btn-outline" data-translate="Conócenos">Conócenos</a>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
