@@ -248,7 +248,7 @@
     <script>
     // Update WhatsApp link based on selected language
     function updateWhatsAppLink(lang) {
-        const phoneNumber = '34673787172';
+        let phoneNumber;
         let message = '';
         
         switch(lang) {
@@ -257,9 +257,11 @@
                 message = 'Hello, I am looking for leather suppliers for manufacturing. I would like to check the availability of a specific type of leather.';
                 break;
             case 'pl':
+                phoneNumber = '34673787172'; // Moises' number for Polish
                 message = 'Dzień dobry, poszukuję dostawców skór do produkcji. Chciałbym sprawdzić dostępność konkretnego rodzaju skóry.';
                 break;
             default: // Spanish (default)
+                phoneNumber = '34673787172'; // Moises' number for Spanish
                 message = 'Hola, estoy buscando proveedores de piel para fabricación. Me gustaría consultar disponibilidad de un tipo de piel específica.';
         }
         
