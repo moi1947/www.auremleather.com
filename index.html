@@ -28,6 +28,7 @@
             </div>
         </div>
     </div>
+
     <header id="inicio">
         <div class="container">
             <div class="header-content">
@@ -56,22 +57,40 @@
                     </li>
                 </ul>
             </nav>
+            
+            <!-- Mobile Language Dropdown (solo visible en móvil) -->
+            <div class="mobile-lang-dropdown" style="display: none;">
+                <button class="mobile-lang-toggle" id="mobileLangToggle">
+                    <img src="https://flagcdn.com/w40/gb.png" alt="English" width="20" height="14">
+                    <span>English</span>
+                </button>
+                <div class="mobile-lang-menu" id="mobileLangMenu">
+                    <button class="mobile-lang-option" data-lang="es">
+                        <img src="https://flagcdn.com/w40/es.png" alt="Español" width="20" height="14">
+                        <span>Español</span>
+                    </button>
+                    <button class="mobile-lang-option active" data-lang="en">
+                        <img src="https://flagcdn.com/w40/gb.png" alt="English" width="20" height="14">
+                        <span>English</span>
+                    </button>
+                    <button class="mobile-lang-option" data-lang="pl">
+                        <img src="https://flagcdn.com/w40/pl.png" alt="Polski" width="20" height="14">
+                        <span>Polski</span>
+                    </button>
+                </div>
+            </div>
         </div>
     </header>
 
     <section id="hero">
-        <div class="container">
-            <div class="hero-content">
-                <div class="logo-container">
-                    <img src="images/logo-aurem.png" alt="Aurem Leather" class="logo-img">
-                </div>
-                <div class="hero-text">
-                    <p class="experience-text" data-translate="40 años de experiencia en el sector de los curtidos">40 años de experiencia en el sector de los curtidos</p>
-                    <div class="hero-cta">
-                        <a href="#contacto" class="btn btn-primary" data-translate="Contáctenos">Contáctenos</a>
-                        <a href="#nosotros" class="btn btn-outline" data-translate="Conócenos">Conócenos</a>
-                    </div>
-                </div>
+        <div class="hero-content">
+            <div class="logo-container">
+                <img src="images/logo-aurem.png" alt="Aurem Leather" class="logo-img">
+            </div>
+            <p class="experience-text">40 AÑOS DE EXPERIENCIA EN EL SECTOR DE LOS CURTIDOS</p>
+            <div class="hero-cta">
+                <a href="#contacto" class="btn btn-primary">Contáctenos</a>
+                <a href="#nosotros" class="btn btn-outline">Conócenos</a>
             </div>
         </div>
     </section>
@@ -226,6 +245,12 @@
         </div>
     </section>
 
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 Aurem Leather. <span data-translate="Todos los derechos reservados">Todos los derechos reservados</span>.</p>
+        </div>
+    </footer>
+
     <script src="js/translate.js"></script>
     <script src="js/mobile-menu.js"></script>
     <script src="js/cookies.js"></script>
@@ -284,5 +309,8 @@
         });
     });
     </script>
+    
+    <!-- Mobile Language Dropdown Script -->
+    <script src="js/mobile-lang.js"></script>
 </body>
 </html>
